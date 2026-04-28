@@ -16,7 +16,7 @@ namespace DWVCoreSlotPicture
             { "com.wtt.commonlib", new SemanticVersioning.Range("~2.0.0") },
             { "com.szonszczyk.definitiveweaponvariants", new SemanticVersioning.Range(">4.1.0") }
         };
-        public override string? Url { get; init; } = "";
+        public override string? Url { get; init; } = "https://github.com/Szonszczyk/DWVCoreSlotPicture";
         public override bool? IsBundleMod { get; init; } = false;
         public override string? License { get; init; } = "MIT";
     }
