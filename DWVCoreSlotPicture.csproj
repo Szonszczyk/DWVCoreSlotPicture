@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>DWVCoreSlotPicture</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <Version>4.2.0</Version>
+    <!-- The two lines below will set the output path for the binaries -->
+    <OutputPath>bin\$(Configuration)\$(ProjectName)\$(AssemblyName)\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Authors>Szonszczyk</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SPTarkov.Common" Version="4.0.4" />
+    <PackageReference Include="SPTarkov.DI" Version="4.0.4" />
+    <PackageReference Include="SPTarkov.Server.Core" Version="4.0.4" />
+    <PackageReference Include="WTT-ServerCommonLib" Version="2.0.18" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="echo f | xcopy /s /y /f &quot;C:\Programowanie\SPT 4.0 Mods\DWVCoreSlotPicture\bin\Debug\DWVCoreSlotPicture\DWVCoreSlotPicture.dll&quot; &quot;C:\Games\SPT 4.0\SPT\user\mods\DWVCoreSlotPicture\DWVCoreSlotPicture.dll&quot;&#xD;&#xA;echo f | xcopy /s /y /f &quot;C:\Programowanie\SPT 4.0 Mods\DWVCoreSlotPicture\bin\Debug\DWVCoreSlotPicture\DWVCoreSlotPicture.pdb&quot; &quot;C:\Games\SPT 4.0\SPT\user\mods\DWVCoreSlotPicture\DWVCoreSlotPicture.pdb&quot;" />
+  </Target>
+</Project>
